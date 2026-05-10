@@ -1,0 +1,8 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+mdev -s
+mkdir -p /mnt
+echo "Initramfs: preparing to switch to real rootfs"
+mount -t ext4 /dev/mmcblk0 /mnt
+exec switch_root /mnt /init

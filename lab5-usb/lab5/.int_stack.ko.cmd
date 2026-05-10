@@ -1,0 +1,1 @@
+savedcmd_/home/ubuntu/lab5/int_stack.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/ubuntu/lab5/int_stack.ko /home/ubuntu/lab5/int_stack.o /home/ubuntu/lab5/int_stack.mod.o;  make -f ./arch/x86/Makefile.postlink /home/ubuntu/lab5/int_stack.ko
